@@ -1,0 +1,96 @@
+:root {
+  /* Colors */
+  --primary-color: #646cff;
+  --primary-hover: #535bf2;
+  --text-primary: #213547;
+  --text-secondary: #666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --secondary-bg: #f5f5f5;
+  --secondary-hover: #e8e8e8;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --image-bg: #f8f8f8;
+
+  /* Typography */
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #747bff;
+    --primary-hover: #646cff;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --border-color: #3a3a3a;
+    --card-bg: #1a1a1a;
+    --secondary-bg: #2a2a2a;
+    --secondary-hover: #333333;
+    --header-bg: rgba(26, 26, 26, 0.9);
+    --image-bg: #2a2a2a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

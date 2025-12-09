@@ -1,0 +1,80 @@
+.cardLink {
+  text-decoration: none;
+  display: block;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.titleLink {
+  text-decoration: none;
+}
+
+.titleLink:hover {
+  text-decoration: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: #ffc220;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.ratingCount {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.priceSection {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.originalPrice {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+}
+
+.savings {
+  font-size: 0.8rem;
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.stock {
+  font-size: 0.8rem;
+  color: #48bb78;
+  font-weight: 500;
+}
+
+.lowStock {
+  font-size: 0.8rem;
+  color: #ed8936;
+  font-weight: 600;
+}
