@@ -106,6 +106,7 @@ copilot-working-group/
 
 ## 🎯 CI/CD Pipeline (You've Got Another Thing Comin')
 
+### Lint and Test Workflow
 The `.github/workflows/lint.yml` workflow runs on every PR and checks your work with care:
 1. Checks out the code (gets it ready for the show)
 2. Sets up Node.js 20 (the version that we know)
@@ -114,6 +115,14 @@ The `.github/workflows/lint.yml` workflow runs on every PR and checks your work 
 5. Runs `npm test` to verify tests pass (don't let failures amass)
 
 **Always** ensure your code passes both linting and tests before submitting a PR. As Iron Maiden would say, "Can I Play With Madness?"—yes, but only if tests pass!
+
+### Copilot Setup Steps (Kickstart My Heart!)
+The `.github/workflows/copilot-setup-steps.yml` pre-configures Copilot's environment before the agent starts (like a soundcheck before the band departs):
+- Automatically clones the repo and sets up Node.js 20 (the runtime that we know)
+- Runs `npm ci` to preload all dependencies (so Copilot doesn't wait, keeping workflows at a first-rate)
+- This workflow runs automatically when modified and can be manually triggered from the Actions tab (to verify it's working, that's where it's at!)
+
+This setup ensures Copilot has everything ready to rock when it starts working on your code—no trial and error, just dependencies preloaded!
 
 ## 🎵 Coding Conventions (Symphony of Destruction... Prevention)
 

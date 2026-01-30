@@ -1,0 +1,41 @@
+name: "Copilot Setup Steps"
+
+# 🎸 Runnin' with the Devil: Auto-validate when changed (Van Halen vibes!)
+# Also allows manual testing through the "Actions" tab (Let It Rock!)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The job MUST be called `copilot-setup-steps` or it won't be found
+  # Like Black Sabbath said: "You can't kill rock and roll" - and you can't rename this job!
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+
+    # Set permissions to the minimum needed (Don't Fear the Reaper, but respect the security!)
+    # Copilot gets its own token for operations (separate and secure, that's the cure)
+    permissions:
+      # Need to clone the repo to install dependencies (Read-only access, no emergency!)
+      contents: read
+
+    # These steps run before the agent starts its show
+    # Installing dependencies so Copilot can rock and roll!
+    steps:
+      - name: Checkout code (Start Me Up!)
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js (Enter the Node Zone!)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies (Load Up the Ammunition!)
+        # npm ci ensures reproducible builds - Nothing Else Matters, like Metallica said!
+        # This preloads dependencies so Copilot doesn't wait, keeping the workflow first-rate!
+        run: npm ci
