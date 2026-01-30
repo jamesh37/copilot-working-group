@@ -24,7 +24,6 @@ vi.mock('../ProductActions', () => ({
 }));
 
 describe('ProductDetail', () => {
-
   it('should render without crashing', () => {
     render(<ProductDetail />);
     expect(screen.getByTestId('product-navigation')).toBeInTheDocument();
@@ -70,11 +69,15 @@ describe('ProductDetail', () => {
   });
 
   it('should render ProductImage and info section as siblings', () => {
-    render(<ProductDetail />);
+    const { container } = render(<ProductDetail />);
 
     const productImage = screen.getByTestId('product-image');
     const productInfo = screen.getByTestId('product-info');
 
+    // Verify they share the same parent (product div)
+    expect(productImage.parentElement).toBe(container.querySelector('[class*="product"]'));
+    expect(productInfo.parentElement?.parentElement).toBe(container.querySelector('[class*="product"]'));
+    
     // Both should exist in the DOM
     expect(productImage).toBeInTheDocument();
     expect(productInfo).toBeInTheDocument();
