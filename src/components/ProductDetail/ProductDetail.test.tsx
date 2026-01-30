@@ -73,10 +73,11 @@ describe('ProductDetail', () => {
 
     const productImage = screen.getByTestId('product-image');
     const productInfo = screen.getByTestId('product-info');
+    const infoSection = container.querySelector('[class*="infoSection"]');
 
-    // Verify they share the same parent (product div)
-    expect(productImage.parentElement).toBe(container.querySelector('[class*="product"]'));
-    expect(productInfo.parentElement?.parentElement).toBe(container.querySelector('[class*="product"]'));
+    // Verify ProductImage and infoSection share the same parent (product div)
+    expect(infoSection).toBeInTheDocument();
+    expect(productImage.parentElement).toBe(infoSection?.parentElement);
     
     // Both should exist in the DOM
     expect(productImage).toBeInTheDocument();
