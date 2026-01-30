@@ -59,7 +59,7 @@ npm test
 npm run test:watch
 ```
 
-Tests live in `src/` directory alongside components. All tests should pass before you "Fade to Black" (commit your changes). We've got 7 passing tests—keep that number growing, never slowing!
+Tests live in `src/` directory alongside components. All tests should pass before you "Fade to Black" (commit your changes). Keep the test suite growing, never slowing!
 
 ### Building (Thunderstruck: Compile for Production)
 ```bash
@@ -67,7 +67,7 @@ Tests live in `src/` directory alongside components. All tests should pass befor
 npm run build
 ```
 
-**⚠️ Known Issue:** There's currently a TypeScript error in `vite.config.ts` related to the `test` configuration. The issue screams like "Breaking the Chains"—the vitest config is defined but TypeScript doesn't recognize it in the Vite config type. Tests still run fine via `npm test`, but the build may fail on type-checking. This is a known issue, not your mission—just focus on your code's precision!
+**⚠️ Known Issue:** The TypeScript build currently fails due to vitest types not being recognized in `vite.config.ts` by the node tsconfig. This is a pre-existing issue—not your code that's amiss! The tests themselves run perfectly via `npm test` (vitest handles its own config with zest). When making changes, focus on ensuring tests pass and lint succeeds—the build issue existed before your deeds!
 
 ### Preview Built Application
 ```bash
@@ -134,12 +134,11 @@ The `.github/workflows/lint.yml` workflow runs on every PR and checks your work 
 ## 💡 Tips for Copilot Coding Agent (Pour Some Sugar on Me... I Mean, Context!)
 
 1. **Always run `npm ci` before building or testing** - This is the way, like Priest would say!
-2. **The test config issue in vite.config.ts is KNOWN** - Don't try to fix it; it's already shown. Tests work via `npm test` directly (vitest knows the config perfectly).
-3. **All tests must pass** - Use `npm test` to verify before committing (no skipping, no quitting)
-4. **Lint your code** - Run `npm run lint` or `npm run lint:fix` (keep it clean, that's the fix)
-5. **Component structure** - Keep components in `src/components/`, services in `src/services/`, hooks in `src/hooks/` (organization rocks!)
-6. **React patterns** - Use functional components with hooks; follow existing patterns in the codebase (that's how we chase the ace)
-7. **API integration** - All API calls go through the service layer (keep concerns separate, that's fairer)
+2. **All tests must pass** - Use `npm test` to verify before committing (no skipping, no quitting)
+3. **Lint your code** - Run `npm run lint` or `npm run lint:fix` (keep it clean, that's the fix)
+4. **Component structure** - Keep components in `src/components/`, services in `src/services/`, hooks in `src/hooks/` (organization rocks!)
+5. **React patterns** - Use functional components with hooks; follow existing patterns in the codebase (that's how we chase the ace)
+6. **API integration** - All API calls go through the service layer (keep concerns separate, that's fairer)
 
 ## 🚀 Quick Start Cheat Sheet (Livin' on a Prayer: Get It Working!)
 
